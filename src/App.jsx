@@ -1,26 +1,29 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import Home from './pages/Home';
+import About from './pages/About';
+import {
+	HashRouter as Router,
+	Route,
+	Redirect,
+	Switch
+} from 'react-router-dom';
 
-import { Switch, Route, Router, Link } from "react-router-dom";
-import { Button, DatePicker,List } from "antd-mobile";
+import { Button, DatePicker, List } from 'antd-mobile';
 
-
-import routes from "./routes";
+import routes from './routes';
 
 function App(props) {
-  const [count, setCount] = useState(0);
-  const date = new Date();
-  return (
-    <div className="App">
-      <List>
-        <DatePicker value={date}>
-          <List.Item arrow="horizontal">Datetime</List.Item>
-        </DatePicker>
-      </List>
-      
-      
-      <Button type='primary'>play</Button>
-    </div>
-  );
+	const [count, setCount] = useState(0);
+	console.log(props);
+	const date = new Date();
+	return (
+		<div className="App">
+			<Router>
+				<Route exact path="/home" component={Home} />
+				<Route path="/about" component={About} />
+			</Router>
+		</div>
+	);
 }
 
 export default App;
