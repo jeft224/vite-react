@@ -1,0 +1,14 @@
+{
+  "kiwiDir": "./.kiwi",
+  "configFile": "./.kiwi/kiwi-config.json",
+  "srcLang": "zh-CN",
+  "distLangs": ["en-US", "zh-TW", "zh-CN"],
+  "googleApiKey": "",
+  "translateOptions": {
+    "concurrentLimit": 10,
+    "requestOptions": {}
+  },
+  "importI18N": "import I18N from 'src/utils/I18N';",
+  "ignoreDir": "",
+  "ignoreFile": ""
+}
