@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 
 import { Switch, Route, Router, Link } from "react-router-dom";
-import logo from "./logo.svg";
-import "./App.css";
 import { Button, DatePicker,List } from "antd-mobile";
 
 
