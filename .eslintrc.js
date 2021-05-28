@@ -1,7 +1,12 @@
 module.exports = {
 	root: true,
 	parser: 'babel-eslint',
-	extends: ['eslint-config-ali/react', 'plugin:prettier/recommended'],
+	extends: [
+		'eslint:recommended',
+		'plugin:react/recommended',
+		// 如果同时使用了eslint和prettier发生冲突了，会关闭掉与prettier有冲突的规则，也就是使用prettier认为对的规则
+		'plugin:prettier/recommended'
+	],
 	parserOptions: {
 		ecmaVersion: 6,
 		sourceType: 'module',
