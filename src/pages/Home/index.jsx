@@ -1,9 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button, DatePicker, List } from 'antd-mobile';
+import { checkAuth, callApi } from 'ehome-utils';
+
 import './index.less';
 
 export default function Home(props) {
 	const date = new Date();
+
+	useEffect(() => {
+		checkAuth();
+		// setThemeColor();
+	}, []);
+
+	useEffect(() => {
+		callApi({
+			prefix: false,
+			apiBase: '/ec',
+			api: '/store/listStoresInNamespace'
+		}).then(res => {
+			console.log(res);
+		});
+	}, []);
 	console.log(props);
 	return (
 		<div>

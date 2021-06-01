@@ -2,6 +2,8 @@ import React from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
 import { HashRouter as Router, Route, Redirect } from 'react-router-dom';
+// import { Spin } from 'ehome-rcm';
+// import AuthComponent from './components/AuthComponent';
 
 import routes from './routes';
 

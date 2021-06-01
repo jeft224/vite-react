@@ -21,6 +21,7 @@ class AuthComponent extends Component {
 
 	componentDidMount() {
 		const self = this;
+		console.log(process.env.NODE_ENV);
 		if (process.env.NODE_ENV === 'development') {
 			self.setState({ showPage: true }, () => {
 				this.props.showPage();

@@ -25,9 +25,59 @@
         Learn how to configure a non-root public URL by running `npm run build`.
       -->
     <title>Vite App</title>
+
+    <style>
+      body {
+        background-color: #f5f5f5;
+        margin: 0 !important;
+      }
+  
+      #loading-container {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+      }
+  
+      #loading-component {
+        position: absolute;
+        left: 0;
+        right: 0;
+        text-align: center;
+        top: 40%;
+        transform: translateY(-50%);
+      }
+  
+      #loading-component svg {
+        width: 16% !important;
+      }
+    </style>
+
   </head>
+
   <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="loading-container">
+      <div id="loading-component"></div>
+    </div>
     <div id="root"></div>
+    
     <script type="module" src="/src/main.jsx"></script>
+    <script src="//fe-cdn.zuolin.com/babel-polyfill/7.0.0-beta.49/polyfill.min.js"></script>
+    <script src="//fe-cdn.zuolin.com/bodymovin/5.4.4/lottie.min.js"></script>
+    <script>
+      lottie.loadAnimation({
+        container: document.getElementById('loading-component'),
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '/cycle_big.json',
+      });
+    </script>
+    <script src="https://fe-cdn.zuolin.com/fastclick/1.0.6/fastclick.js"></script>
+    <!-- <script src="https://fe-cdn.zuolin.com/react-router-dom/4.1.2/react-router-dom.min.js"></script> -->
+    <script src="//fe-cdn.zuolin.com/css-vars-ponyfill/1.16.2/css-vars-ponyfill.js"></script>
+    <!-- <script src="//fe-cdn.zuolin.com/eh-init/init.js"></script> -->
   </body>
 </html>
